@@ -72,7 +72,6 @@
       margin: 0;
       padding: 0;
       transition: background-color 0.4s ease, border-color 0.4s ease;
-      cursor: none;
       /* Hide default cursor to enable custom interactive cursor */
     }
 
@@ -120,44 +119,7 @@
       border-bottom: 1px solid var(--card-border);
     }
 
-    /* Custom Cursor Glow */
-    #custom-cursor {
-      width: 8px;
-      height: 8px;
-      background-color: var(--accent);
-      border-radius: 50%;
-      position: fixed;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 9999;
-      transition: width 0.2s, height 0.2s, background-color 0.2s;
-    }
 
-    #custom-cursor-glow {
-      width: 40px;
-      height: 40px;
-      border: 1px solid rgba(var(--accent-rgb), 0.5);
-      border-radius: 50%;
-      position: fixed;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 9998;
-      transition: transform 0.08s ease-out, width 0.2s, height 0.2s, border-color 0.2s;
-    }
-
-    /* Interactive hover expansion for custom cursor */
-    .hover-target:hover~#custom-cursor {
-      width: 24px;
-      height: 24px;
-      background-color: rgba(var(--accent-rgb), 0.2);
-    }
-
-    .hover-target:hover~#custom-cursor-glow {
-      width: 60px;
-      height: 60px;
-      border-color: rgba(var(--accent-rgb), 0.8);
-      background-color: rgba(var(--accent-rgb), 0.05);
-    }
 
     /* Floating Animations */
     @keyframes floating {
@@ -241,10 +203,6 @@
 </head>
 
 <body class="antialiased">
-
-  <!-- Custom Cursor -->
-  <div id="custom-cursor"></div>
-  <div id="custom-cursor-glow"></div>
 
   <!-- Background Particle Canvas wrapper -->
   <div class="fixed inset-0 w-full h-full overflow-hidden pointer-events-none" style="z-index: 0;">
@@ -654,8 +612,8 @@
               class="relative overflow-hidden h-48 bg-gradient-to-br from-orange-500/20 to-stone-900/40 flex items-center justify-center">
 
               <!-- IMAGE -->
-              <img src="/wordpress.png" alt="Shopify Store"
-                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/htmlcssjs.png" alt="Shopify Store"
+                class="absolute inset-0 w-full h-full object-cover=object-fit:inherit group-hover:scale-110 transition-transform duration-300" />
               <div class="absolute inset-0 bg-black/40"></div>
               <!-- Placeholder Graphic mockup design representing SaaS Dash -->
 
@@ -670,7 +628,7 @@
               <div class="flex items-center justify-between border-t border-[var(--card-border)] pt-4 mt-auto">
                 <span class="text-3xs font-semibold text-[var(--text-secondary)] uppercase">HTML5 • CSS3 • JS</span>
                 <div class="flex space-x-2">
-                  <a href="#"
+                  <a href="/project.html?filter=frontend"
                     class="hover-target text-xs text-orange-500 hover:text-white hover:bg-orange-500 border border-orange-500/40 px-3 py-1.5 rounded-full transition-all duration-300">Demo</a>
                   <a href="#"
                     class="hover-target text-xs text-[var(--text-secondary)] hover:text-white border border-[var(--card-border)] px-3 py-1.5 rounded-full transition-all duration-300"><i
@@ -687,7 +645,7 @@
               class="relative overflow-hidden h-48 bg-gradient-to-br from-orange-500/20 to-stone-900/40 flex items-center justify-center">
               <!-- IMAGE -->
               <img src="/wordpress.png" alt="Shopify Store"
-                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                class="absolute inset-0 w-full h-full object-cover=object-fit:inherit group-hover:scale-110 transition-transform duration-300" />
               <div class="absolute inset-0 bg-black/40"></div>
 
 
@@ -705,7 +663,7 @@
                 <span class="text-3xs font-semibold text-[var(--text-secondary)] uppercase">WP • ELM •
                   WooCommerce</span>
                 <div class="flex space-x-2">
-                  <a href="#"
+                  <a href="/project.html?filter=wordpress"
                     class="hover-target text-xs text-orange-500 hover:text-white hover:bg-orange-500 border border-orange-500/40 px-3 py-1.5 rounded-full transition-all duration-300">Demo</a>
                   <a href="#"
                     class="hover-target text-xs text-[var(--text-secondary)] hover:text-white border border-[var(--card-border)] px-3 py-1.5 rounded-full transition-all duration-300"><i
@@ -721,8 +679,8 @@
             <div
               class="relative overflow-hidden h-48 bg-gradient-to-br from-orange-500/20 to-stone-900/40 flex items-center justify-center">
               <!-- IMAGE -->
-              <img src="/wordpress.png" alt="Shopify Store"
-                class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+              <img src="/shopify.webp" alt="Shopify Store"
+                class="absolute inset-0 w-full h-full object-cover=object-fit:inherit group-hover:scale-110 transition-transform duration-300" />
               <div class="absolute inset-0 bg-black/40"></div>
 
 
@@ -739,7 +697,7 @@
               <div class="flex items-center justify-between border-t border-[var(--card-border)] pt-4 mt-auto">
                 <span class="text-3xs font-semibold text-[var(--text-secondary)] uppercase">SHOPIFY • CSS • JS</span>
                 <div class="flex space-x-2">
-                  <a href="#"
+                  <a href="/project.html?filter=shopify"
                     class="hover-target text-xs text-orange-500 hover:text-white hover:bg-orange-500 border border-orange-500/40 px-3 py-1.5 rounded-full transition-all duration-300">Demo</a>
                   <a href="#"
                     class="hover-target text-xs text-[var(--text-secondary)] hover:text-white border border-[var(--card-border)] px-3 py-1.5 rounded-full transition-all duration-300"><i
@@ -1334,21 +1292,6 @@
 
   <!-- INTERACTIVE JAVASCRIPT LOGIC -->
   <script>
-    // Custom Glow Cursor Following Logic
-    const cursor = document.getElementById('custom-cursor');
-    const cursorGlow = document.getElementById('custom-cursor-glow');
-
-    document.addEventListener('mousemove', (e) => {
-      // Direct positioning
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-
-      // Lag effect implementation for outer glow element
-      cursorGlow.animate({
-        left: e.clientX + 'px',
-        top: e.clientY + 'px'
-      }, { duration: 300, fill: "forwards" });
-    });
 
     // Mobile Navigation Drawer Toggle Handler
     const menuToggle = document.getElementById('menu-toggle');
